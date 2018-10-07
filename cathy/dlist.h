@@ -237,7 +237,7 @@ public:
 
 template <typename T>
 void Sentinel<T>::push_front(const T& data){
-    Node* nn=new Node(data,front_,front_->next_);
+    Node* nn=new Node(data,front_->next_,front_);
     front_->next_->prev_=nn;
     front_->next_=nn;
 }
